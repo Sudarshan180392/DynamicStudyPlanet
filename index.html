@@ -8,6 +8,8 @@
 <!-- UI-UX Pro Max: Trust & Authority pattern → EB Garamond (display) + Lato (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- AOS Animation CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css" >
 </head>
 <body>
@@ -45,7 +47,13 @@
 <!-- HERO -->
 <main id="main">
 <section class="hero" aria-labelledby="hero-heading">
-  <div class="hero-content">
+  <div class="hero-bg-wrapper">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="College.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
     <p class="hero-eyebrow">Jalandhar · Ludhiana · Jagraon</p>
     <h1 class="hero-title" id="hero-heading">
       Punjab's Most Trusted<br>
@@ -77,7 +85,7 @@
     </div>
   </div>
 
-  <div class="hero-cred-panel" role="region" aria-label="Key statistics">
+  <div class="hero-cred-panel glass-panel" role="region" aria-label="Key statistics" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
     <p class="cred-heading">Our Track Record</p>
     <div class="stat-grid">
       <div class="stat-item">
@@ -145,41 +153,65 @@
       <p class="section-lead">We handle admissions and visas for six top study destinations — pick yours and let our experts do the rest.</p>
     </div>
     <div class="dest-grid">
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇨🇦</div>
-        <h3 class="dest-country">Canada</h3>
-        <p class="dest-desc">World-class universities, post-study work permits, and one of the clearest pathways to PR through Express Entry.</p>
-        <span class="dest-link" aria-label="Learn more about studying in Canada">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="100" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80" alt="Study in Canada" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">Canada <span aria-hidden="true">🇨🇦</span></h3>
+          <p class="dest-desc">World-class universities, post-study work permits, and one of the clearest pathways to PR through Express Entry.</p>
+          <span class="dest-link" aria-label="Learn more about studying in Canada">Learn more →</span>
+        </div>
       </article>
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇦🇺</div>
-        <h3 class="dest-country">Australia</h3>
-        <p class="dest-desc">Top QS-ranked institutions, vibrant student life, and a straightforward student visa process with strong post-study rights.</p>
-        <span class="dest-link" aria-label="Learn more about studying in Australia">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Study in Australia" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">Australia <span aria-hidden="true">🇦🇺</span></h3>
+          <p class="dest-desc">Top QS-ranked institutions, vibrant student life, and a straightforward student visa process with strong post-study rights.</p>
+          <span class="dest-link" aria-label="Learn more about studying in Australia">Learn more →</span>
+        </div>
       </article>
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇬🇧</div>
-        <h3 class="dest-country">United Kingdom</h3>
-        <p class="dest-desc">Prestigious degrees, the 2-year Graduate Route visa, and a globally recognized credential in 1–3 years.</p>
-        <span class="dest-link" aria-label="Learn more about studying in the UK">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="300" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="Study in UK" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">United Kingdom <span aria-hidden="true">🇬🇧</span></h3>
+          <p class="dest-desc">Prestigious degrees, the 2-year Graduate Route visa, and a globally recognized credential in 1–3 years.</p>
+          <span class="dest-link" aria-label="Learn more about studying in the UK">Learn more →</span>
+        </div>
       </article>
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇳🇿</div>
-        <h3 class="dest-country">New Zealand</h3>
-        <p class="dest-desc">Safe, scenic, and welcoming — excellent for undergraduate and postgraduate studies with strong work rights.</p>
-        <span class="dest-link" aria-label="Learn more about studying in New Zealand">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="100" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=800&q=80" alt="Study in New Zealand" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">New Zealand <span aria-hidden="true">🇳🇿</span></h3>
+          <p class="dest-desc">Safe, scenic, and welcoming — excellent for undergraduate and postgraduate studies with strong work rights.</p>
+          <span class="dest-link" aria-label="Learn more about studying in New Zealand">Learn more →</span>
+        </div>
       </article>
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇪🇺</div>
-        <h3 class="dest-country">Europe</h3>
-        <p class="dest-desc">Affordable tuition, Schengen access, and world-renowned research universities across Germany, France &amp; beyond.</p>
-        <span class="dest-link" aria-label="Learn more about studying in Europe">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80" alt="Study in Europe" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">Europe <span aria-hidden="true">🇪🇺</span></h3>
+          <p class="dest-desc">Affordable tuition, Schengen access, and world-renowned research universities across Germany, France &amp; beyond.</p>
+          <span class="dest-link" aria-label="Learn more about studying in Europe">Learn more →</span>
+        </div>
       </article>
-      <article class="dest-card fade-up" tabindex="0">
-        <div class="dest-flag-wrap" aria-hidden="true">🇺🇸</div>
-        <h3 class="dest-country">USA</h3>
-        <p class="dest-desc">Ivy League and state university options with Optional Practical Training and STEM OPT extension of up to 3 years.</p>
-        <span class="dest-link" aria-label="Learn more about studying in the USA">Learn more →</span>
+      <article class="dest-card" data-aos="fade-up" data-aos-delay="300" tabindex="0">
+        <div class="dest-img-wrap">
+          <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80" alt="Study in USA" loading="lazy">
+        </div>
+        <div class="dest-card-content">
+          <h3 class="dest-country">USA <span aria-hidden="true">🇺🇸</span></h3>
+          <p class="dest-desc">Ivy League and state university options with Optional Practical Training and STEM OPT extension of up to 3 years.</p>
+          <span class="dest-link" aria-label="Learn more about studying in the USA">Learn more →</span>
+        </div>
       </article>
     </div>
   </div>
@@ -194,56 +226,56 @@
       <p class="section-lead">One office, every service you need — from your first IELTS class to your PR approval.</p>
     </div>
     <div class="services-grid">
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
         </div>
         <h3 class="svc-name">Study Visa</h3>
         <p class="svc-desc">End-to-end assistance — university shortlisting, application, SOP drafting, visa filing, and pre-departure briefing.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
         </div>
         <h3 class="svc-name">Spouse Visa</h3>
         <p class="svc-desc">Reunite with your partner. We handle spouse and dependent visa applications for Canada, UK, Australia, USA &amp; New Zealand.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         </div>
         <h3 class="svc-name">Tourist Visa</h3>
         <p class="svc-desc">Visit your dream country with confidence. We prepare your application to maximize approval probability.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <h3 class="svc-name">Permanent Residency</h3>
         <p class="svc-desc">Turn your study or work experience into a permanent home — every point-based and sponsored PR pathway, handled.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
         <h3 class="svc-name">IELTS &amp; PTE Coaching</h3>
         <p class="svc-desc">Experienced instructors, personalized attention, proven techniques — in-person and online. Students from Delhi to remote Punjab have cleared PTE with us.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
         </div>
         <h3 class="svc-name">Education Loan</h3>
         <p class="svc-desc">Stress-free loan facilitation with transparent terms — so finances never stand between you and the world's best universities.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
         <h3 class="svc-name">Spoken English</h3>
         <p class="svc-desc">Build confidence for visa interviews, university life, and your career abroad — practical, conversational, results-focused.</p>
       </div>
-      <div class="svc-card fade-up">
+      <div class="svc-card  " data-aos="fade-up">
         <div class="svc-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41"/><path d="M4.93 4.93l1.41 1.41"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M19.07 19.07l-1.41-1.41"/><path d="M20 12h2"/><path d="M2 12h2"/></svg>
         </div>
@@ -258,25 +290,18 @@
 <section class="section" id="about" aria-labelledby="about-heading">
   <div class="section-inner">
     <div class="about-layout">
-      <div class="about-visual fade-up" aria-hidden="true">
+      <div class="about-visual" data-aos="fade-right" data-aos-duration="1000" aria-hidden="true">
         <div class="about-img-block">
-          <div class="about-img-inner">
-            <svg class="about-globe-svg" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="120" cy="120" r="110" stroke="white" stroke-width="1.5"/>
-              <ellipse cx="120" cy="120" rx="110" ry="40" stroke="white" stroke-width="1"/>
-              <ellipse cx="120" cy="120" rx="110" ry="75" stroke="white" stroke-width="1"/>
-              <line x1="10" y1="120" x2="230" y2="120" stroke="white" stroke-width="1"/>
-              <line x1="120" y1="10" x2="120" y2="230" stroke="white" stroke-width="1"/>
-              <ellipse cx="120" cy="120" rx="55" ry="110" stroke="white" stroke-width="1"/>
-            </svg>
+          <div class="about-img-inner glass-panel">
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Counseling Team" class="about-photo">
           </div>
         </div>
-        <div class="about-tag" aria-label="10 plus years of trust">
+        <div class="about-tag glass-panel" aria-label="10 plus years of trust">
           <div class="about-tag-num">10+</div>
           <div class="about-tag-label">Years of Trust</div>
         </div>
       </div>
-      <div class="about-text fade-up">
+      <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
         <p class="section-eyebrow">About Us</p>
         <h2 class="section-title" id="about-heading">Expertise You Can <em>Actually Rely On</em></h2>
         <div style="margin-top:1.25rem;">
@@ -326,22 +351,22 @@
       <h2 class="section-title" id="process-heading">From First Call to <em>Flight Confirmation</em></h2>
     </div>
     <div class="process-steps" role="list">
-      <div class="step fade-up" role="listitem">
+      <div class="step  " data-aos="fade-up" role="listitem">
         <div class="step-circle" aria-hidden="true">1</div>
         <h3 class="step-title">Free Consultation</h3>
         <p class="step-desc">We assess your profile, eligibility, and goals — no jargon, no pressure, just an honest conversation with a real expert.</p>
       </div>
-      <div class="step fade-up" role="listitem">
+      <div class="step  " data-aos="fade-up" role="listitem">
         <div class="step-circle" aria-hidden="true">2</div>
         <h3 class="step-title">Course &amp; Country Match</h3>
         <p class="step-desc">We shortlist the right universities and programs based on your academics, budget, and long-term career targets.</p>
       </div>
-      <div class="step fade-up" role="listitem">
+      <div class="step  " data-aos="fade-up" role="listitem">
         <div class="step-circle" aria-hidden="true">3</div>
         <h3 class="step-title">Visa Application</h3>
         <p class="step-desc">We prepare every document, draft your SOP, and submit a complete, visa-ready application with maximum accuracy.</p>
       </div>
-      <div class="step fade-up" role="listitem">
+      <div class="step  " data-aos="fade-up" role="listitem">
         <div class="step-circle" aria-hidden="true">4</div>
         <h3 class="step-title">Pre-Departure &amp; Beyond</h3>
         <p class="step-desc">From airport tips to accommodation advice — we stay your team even after the visa stamp is in.</p>
@@ -360,7 +385,7 @@
     </div>
     <div class="testimonials-grid">
 
-      <article class="tcard fade-up" aria-label="Testimonial from Mr. Manjot Singh">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Mr. Manjot Singh">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -379,7 +404,7 @@
         </div>
       </article>
 
-      <article class="tcard fade-up" aria-label="Testimonial from Mr. Karanveer Singh">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Mr. Karanveer Singh">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -398,7 +423,7 @@
         </div>
       </article>
 
-      <article class="tcard fade-up" aria-label="Testimonial from Riya K">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Riya K">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -417,7 +442,7 @@
         </div>
       </article>
 
-      <article class="tcard fade-up" aria-label="Testimonial from Mr. Sumit Kumar">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Mr. Sumit Kumar">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -436,7 +461,7 @@
         </div>
       </article>
 
-      <article class="tcard fade-up" aria-label="Testimonial from Mr. Suresh Juneja">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Mr. Suresh Juneja">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -455,7 +480,7 @@
         </div>
       </article>
 
-      <article class="tcard fade-up" aria-label="Testimonial from Mr. Harsukh Singh">
+      <article class="tcard  " data-aos="fade-up" aria-label="Testimonial from Mr. Harsukh Singh">
         <div class="tcard-quote-mark" aria-hidden="true">"</div>
         <div class="tcard-stars" aria-label="5 out of 5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -486,7 +511,7 @@
       <h2 class="section-title" id="offices-heading">Three Offices Across Punjab,<br><em>One Standard of Service</em></h2>
     </div>
     <div class="offices-grid">
-      <article class="office-card fade-up">
+      <article class="office-card  " data-aos="fade-up">
         <span class="office-tag">Head Office</span>
         <h3 class="office-city">Jalandhar</h3>
         <address class="office-addr">923, First Floor, Near Bus Stand, Gate No. 5, G.T. Road, Jalandhar – 144001</address>
@@ -495,7 +520,7 @@
           +91 99149-23322
         </a>
       </article>
-      <article class="office-card fade-up">
+      <article class="office-card  " data-aos="fade-up">
         <span class="office-tag">Branch Office</span>
         <h3 class="office-city">Ludhiana</h3>
         <address class="office-addr">2K Tower, Link Road, Adjoining Passport Office, Ludhiana – 141001</address>
@@ -504,7 +529,7 @@
           +91 91155-13322
         </a>
       </article>
-      <article class="office-card fade-up">
+      <article class="office-card  " data-aos="fade-up">
         <span class="office-tag">Branch Office</span>
         <h3 class="office-city">Jagraon</h3>
         <address class="office-addr">Raikot Road, Adjoining Sonalika Showroom, Jagraon – 142026</address>
@@ -646,18 +671,15 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  // Scroll-triggered fade-up
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e, idx) => {
-      if (e.isIntersecting) {
-        const delay = (idx % 4) * 80;
-        setTimeout(() => e.target.classList.add('visible'), delay);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  // Initialize AOS
+  AOS.init({
+    once: true,
+    offset: 50,
+    duration: 800,
+    easing: 'ease-out-cubic',
+  });
 
   // Form submit (no-op demo)
   document.querySelector('.form-submit').addEventListener('click', (e) => {
